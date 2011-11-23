@@ -2,8 +2,6 @@ package com.tgid.data
 
 import spock.lang.Specification
 
-/**
- */
 abstract class ConstraintUnitSpec extends Specification {
 
     String getLongString(Integer length) {
