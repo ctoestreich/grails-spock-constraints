@@ -22,6 +22,8 @@ grails.project.dependency.resolution = {
         grailsCentral()
         mavenCentral()
 
+        mavenRepo "http://m2repo.spockframework.org/snapshots"
+
         // uncomment these to enable remote dependency resolution from public Maven repositories
         //mavenCentral()
         //mavenLocal()
@@ -42,5 +44,7 @@ grails.project.dependency.resolution = {
         compile ":resources:1.1.1"
 
         build ":tomcat:$grailsVersion"
+
+        test ":spock:0.6-SNAPSHOT"
     }
 }
