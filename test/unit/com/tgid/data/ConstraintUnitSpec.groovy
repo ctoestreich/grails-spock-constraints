@@ -22,14 +22,14 @@ abstract class ConstraintUnitSpec extends Specification {
         valid ? "4111111111111111" : "41014"
     }
 
-    def validateConstraints(obj, field, error) {
-        if(error && error != 'valid') {
-            assert !obj.validate()
+    void validateConstraints(obj, field, error) {
+        def validated = obj.validate()
+        if (error && error != 'valid') {
+            assert !validated
             assert obj.errors[field]
             assert error == obj.errors[field]
         } else {
             assert !obj.errors[field]
         }
-        true
     }
 }
