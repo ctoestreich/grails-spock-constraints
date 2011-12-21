@@ -106,12 +106,12 @@ class PersonSpec extends ConstraintUnitSpec {
         validateConstraints(obj, field, error)
 
         where:
-        error   | field      | val
-        'url'   | 'homePage' | getUrl(false)
-        'valid' | 'homePage' | '' //blanks work for url
-        'valid' | 'homePage' | null //null works for url
-        'valid' | 'homePage' | getUrl(true) + '/page.gsp'
-        'valid' | 'homePage' | getUrl(true)
+        error      | field      | val
+        'url'      | 'homePage' | getUrl(false)
+        'valid'    | 'homePage' | '' //blanks work for url
+        'nullable' | 'homePage' | null //null works for url (2.0.0 not anymore)
+        'valid'    | 'homePage' | getUrl(true) + '/page.gsp'
+        'valid'    | 'homePage' | getUrl(true)
     }
 
     @Unroll({"person $field is $error using $val"})
