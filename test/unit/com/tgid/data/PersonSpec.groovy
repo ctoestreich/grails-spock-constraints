@@ -11,7 +11,7 @@ class PersonSpec extends ConstraintUnitSpec {
         mockForConstraintsTests(Person, [new Person(ssn: '123456789')])
     }
 
-    @Unroll({"test person all constraints $field is $error"})
+    @Unroll("test person all constraints #field is #error")
     def "test person all constraints"() {
         when:
         def obj = new Person("$field": val)
@@ -45,7 +45,7 @@ class PersonSpec extends ConstraintUnitSpec {
         'invalid.bountyhunter' | 'username'   | 'buba'
     }
 
-    @Unroll({"person $field is $error using $val"})
+    @Unroll("person #field is #error using #val")
     def "test person age constraints"() {
         when:
         def obj = new Person("$field": val)
@@ -63,7 +63,7 @@ class PersonSpec extends ConstraintUnitSpec {
         'valid'    | 'age' | 0
     }
 
-    @Unroll({"person $field is $error using $val"})
+    @Unroll("person #field is #error using #val")
     def "test person ssn constraints"() {
         when:
         def obj = new Person("$field": val)
@@ -80,7 +80,7 @@ class PersonSpec extends ConstraintUnitSpec {
         'valid'    | 'ssn' | '123-45-6787'
     }
 
-    @Unroll({"person $field is $error using $val"})
+    @Unroll("person #field is #error using #val")
     def "test person username constraints"() {
         when:
         def obj = new Person("$field": val)
@@ -97,7 +97,7 @@ class PersonSpec extends ConstraintUnitSpec {
         'valid'                | 'username' | 'bobajunior'
     }
 
-    @Unroll({"person $field is $error using $val"})
+    @Unroll("person #field is #error using #val")
     def "test person homepage constraints"() {
         when:
         def obj = new Person("$field": val)
@@ -114,7 +114,7 @@ class PersonSpec extends ConstraintUnitSpec {
         'valid'    | 'homePage' | getUrl(true)
     }
 
-    @Unroll({"person $field is $error using $val"})
+    @Unroll("person #field is #error using #val")
     def "test person gender constraints"() {
         when:
         def obj = new Person("$field": val)
@@ -131,7 +131,7 @@ class PersonSpec extends ConstraintUnitSpec {
         'valid'    | 'gender' | 'Female'
     }
 
-    @Unroll({"person $field is $error using $val"})
+    @Unroll("person #field is #error using #val")
     def "test person credit card constraints"() {
         when:
         def obj = new Person("$field": val)
@@ -147,7 +147,7 @@ class PersonSpec extends ConstraintUnitSpec {
         'valid'      | 'amex' | getCreditCard(true)
     }
 
-    @Unroll({"person $field is $error using $val"})
+    @Unroll("person #field is #error using #val")
     def "test person birth date constraints"() {
         when:
         def obj = new Person("$field": val)
@@ -163,7 +163,7 @@ class PersonSpec extends ConstraintUnitSpec {
         'valid'    | 'birthDate' | new Date()
     }
 
-    @Unroll({"person $field testing $error"})
+    @Unroll("person #field testing #error")
     def "test person children constraints"() {
         when:
         def obj = new Person("$field": val)

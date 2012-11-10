@@ -5,9 +5,7 @@ import spock.lang.Specification
 abstract class ConstraintUnitSpec extends Specification {
 
     String getLongString(Integer length) {
-        def longString = ""
-        length.times { longString += "a" }
-        longString
+        'a' * length
     }
 
     String getEmail(Boolean valid) {

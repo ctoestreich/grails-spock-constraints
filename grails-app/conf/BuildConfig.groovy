@@ -21,16 +21,6 @@ grails.project.dependency.resolution = {
         grailsHome()
         grailsCentral()
         mavenCentral()
-
-        mavenRepo "http://m2repo.spockframework.org/snapshots"
-
-        // uncomment these to enable remote dependency resolution from public Maven repositories
-        //mavenCentral()
-        //mavenLocal()
-        //mavenRepo "http://snapshots.repository.codehaus.org"
-        //mavenRepo "http://repository.codehaus.org"
-        //mavenRepo "http://download.java.net/maven/2/"
-        //mavenRepo "http://repository.jboss.com/maven2/"
     }
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
@@ -40,11 +30,11 @@ grails.project.dependency.resolution = {
 
     plugins {
         compile ":hibernate:$grailsVersion"
-        compile ":jquery:1.6.1.1"
-        compile ":resources:1.1.1"
+        runtime ":jquery:1.8.2"
+        compile ":resources:1.2.RC2"
 
         build ":tomcat:$grailsVersion"
 
-        test ":spock:0.6-SNAPSHOT"
+        test ":spock:0.7"
     }
 }
